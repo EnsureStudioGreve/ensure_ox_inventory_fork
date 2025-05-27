@@ -222,4 +222,57 @@ return {
 		label = 'Scrap Metal',
 		weight = 80,
 	},
+
+	    ['devitem_uncommon'] = {
+			label = 'Test Item (Uncommon)',
+			weight = 100,
+			stack = false,
+			close = true, 
+            metadata = {
+                rarity = 'uncommon',
+            },
+	},
+
+    ['devitem_common'] = {
+			label = 'Test Item (Common)',
+			weight = 100,
+			stack = false,
+			close = true, 
+            metadata = {
+                rarity = 'common',
+            },
+	},
+
+    
+    ['devitem_rare'] = {
+		label = 'Test Item (Rare)',
+		weight = 100,
+		stack = false,
+		close = true, 
+        metadata = {
+            rarity = 'rare',
+        },
+	},
+
+    ['devitem_epic'] = {
+		label = 'Test Item (Epic)',
+		weight = 100,
+		stack = false,
+		close = true, 
+        metadata = {
+            rarity = 'epic',
+        },
+	},
+
+    
+    ['devitem_legendary'] = {
+		label = 'Test Item (Legendary)',
+		weight = 100,
+		stack = false,
+		close = true, 
+        metadata = {
+            rarity = 'legendary',
+        },
+	},
+
 }
