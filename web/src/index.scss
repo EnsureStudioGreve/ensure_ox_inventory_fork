@@ -293,9 +293,10 @@ button:active {
   border-color: rgba(0, 0, 0, 0.2);
   border-style: inset;
   border-width: 1px;
-  animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; // Comment this part to remove the fancy animation when opening inv - This is something i added for nice effect - Greve
 }
 
+// Comment this part to remove the rest related to the fancy animation when opening/loading inv -- Greve
 @keyframes zoomOutAndShake {
   0% {
     transform: scale(0);
