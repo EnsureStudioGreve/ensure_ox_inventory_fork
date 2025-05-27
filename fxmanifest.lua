@@ -3,10 +3,10 @@ use_experimental_fxv2_oal 'yes'
 lua54 'yes'
 game 'gta5'
 name 'ox_inventory'
-author 'Overextended'
+author 'Overextended - Updated and modified by: Greve'
 version '2.44.1'
-repository 'https://github.com/overextended/ox_inventory'
-description 'Slot-based inventory with item metadata support'
+repository 'https://github.com/EnsureStudioGreve/ensure_ox_inventory_fork'
+description 'Slot-based inventory with item metadata support - Modified'
 
 dependencies {
     '/server:6116',

@@ -1,4 +1,4 @@
-# ox_inventory
+# ox_inventory fork made by Ensure Studio - Greve & Fjella
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
@@ -7,7 +7,7 @@ A complete inventory system for FiveM, implementing items, weapons, shops, and m
 ![](https://img.shields.io/github/contributors/overextended/ox_inventory?logo=github)
 ![](https://img.shields.io/github/v/release/overextended/ox_inventory?logo=github)
 
-## 📚 Documentation
+## 📚 Docs
 
 https://overextended.dev/ox_inventory
 
