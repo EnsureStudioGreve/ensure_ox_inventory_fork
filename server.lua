@@ -532,6 +532,37 @@ local function conversionScript()
 	conversionScript = func()
 end
 
+-- Get rarity for a given item from ox_inventory's item definitions
+local function getItemRarity(itemName)
+    local item = exports.ox_inventory:Items(itemName)
+    if item and item.metadata and item.metadata.rarity then
+        return item.metadata.rarity
+    end
+    return "common"
+end
+
+-- Wrapper to give item with rarity metadata
+function GiveItemWithRarity(source, itemName, count, customMetadata)
+    local metadata = customMetadata or {}
+    metadata.rarity = metadata.rarity or getItemRarity(itemName)
+
+    exports.ox_inventory:AddItem(source, itemName, count, metadata)
+end
+
+-- Register command to give item with rarity
+RegisterCommand("giveitemwithrarity", function(source, args)
+    local target = tonumber(args[1]) or source
+    local itemName = args[2]
+    local amount = tonumber(args[3]) or 1
+
+    if not itemName then
+        print("Usage: /giveitemwithrarity [id] [itemname] [amount]")
+        return
+    end
+
+    GiveItemWithRarity(target, itemName, amount)
+end)
+
 RegisterCommand('convertinventory', function(source, args)
 	if source ~= 0 then return warn('This command can only be executed with the server console.') end
 	if type(conversionScript) == 'function' then conversionScript() end
@@ -545,7 +576,6 @@ RegisterCommand('convertinventory', function(source, args)
 
 	CreateThread(convert)
 end, true)
-
 
 lib.addCommand({'additem', 'giveitem'}, {
 	help = 'Gives an item to a player with the given id',
