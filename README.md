@@ -11,10 +11,6 @@ A complete inventory system for FiveM, implementing items, weapons, shops, and m
 
 https://overextended.dev/ox_inventory
 
-## 💾 Download
-
-https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
-
 ## Supported frameworks
 
 We do not guarantee compatibility or support for third-party resources.
