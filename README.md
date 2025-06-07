@@ -7,10 +7,10 @@ A complete inventory system for FiveM, implementing items, weapons, shops, and m
 
 [Preview Video - Ensure Style](https://streamable.com/q4hiyb)
 
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/total?logo=github)
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/overextended/ox_inventory?logo=github)
-![](https://img.shields.io/github/v/release/overextended/ox_inventory?logo=github)
+![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/total?logo=github)
+![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/EnsureStudioGreve/ensure_ox_inventory_fork?logo=github)
+![](https://img.shields.io/github/v/release/EnsureStudioGreve/ensure_ox_inventory_fork?logo=github)
 
 ## 📚 Docs
 
