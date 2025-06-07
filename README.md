@@ -5,7 +5,7 @@ A complete inventory system for FiveM, implementing items, weapons, shops, and m
 ![alt text](image.png)
 ## Demo Video
 
-[Preview Video - Ensure Style](https://streamable.com/q4hiyb)
+[Preview Video - Ensure Style](https://streamable.com/0thplb)
 
 ![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/total?logo=github)
 ![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/latest/total?logo=github)
