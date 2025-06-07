@@ -2,10 +2,18 @@
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/total?logo=github)
-![](https://img.shields.io/github/downloads/overextended/ox_inventory/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/overextended/ox_inventory?logo=github)
-![](https://img.shields.io/github/v/release/overextended/ox_inventory?logo=github)
+## Demo Video
+
+[Preview Video - Ensure Style](https://streamable.com/0thplb)
+
+## Teaser/Preview Image
+
+![alt text](image.png)
+
+![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/total?logo=github)
+![](https://img.shields.io/github/downloads/EnsureStudioGreve/ensure_ox_inventory_fork/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/EnsureStudioGreve/ensure_ox_inventory_fork?logo=github)
+![](https://img.shields.io/github/v/release/EnsureStudioGreve/ensure_ox_inventory_fork?logo=github)
 
 ## 📚 Docs
 
@@ -35,6 +43,9 @@ We do not guarantee compatibility or support for third-party resources.
 - Durability, allowing items to be depleted or removed overtime.
 - Internal item system provides secure and easy handling for item use effects.
 - Compatibility with 3rd party framework item registration.
+
+### Added by Ensure Studio
+- Added metadata rarity system ("common, uncommon, rare, epic & legendary")
 
 ### Shops
 
