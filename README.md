@@ -45,7 +45,7 @@ We do not guarantee compatibility or support for third-party resources.
 - Compatibility with 3rd party framework item registration.
 
 ### Added by Ensure Studio
-- Added metadata rarity system ("uncommon, common, rare, epic & legendary")
+- Added metadata rarity system ("common, uncommon, rare, epic & legendary")
 
 ### Shops
 
