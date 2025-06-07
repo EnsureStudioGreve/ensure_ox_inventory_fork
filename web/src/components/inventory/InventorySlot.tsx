@@ -18,7 +18,7 @@ import { useMergeRefs } from '@floating-ui/react';
 
 const playDragAudio = () => {
   const audio = new Audio('/audioeffects/dragaudio.mp3');
-  audio.volume = 0.25;
+  audio.volume = 0.4;
   audio.play().catch(() => {});
 };
 

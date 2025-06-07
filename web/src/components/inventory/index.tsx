@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useNuiEvent from '../../hooks/useNuiEvent';
 import InventoryControl from './InventoryControl';
 import InventoryHotbar from './InventoryHotbar';
@@ -16,6 +16,7 @@ import Fade from '../utils/transitions/Fade';
 
 const Inventory: React.FC = () => {
   const [inventoryVisible, setInventoryVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useAppDispatch();
 
   useNuiEvent<boolean>('setInventoryVisible', setInventoryVisible);
@@ -30,8 +31,14 @@ const Inventory: React.FC = () => {
     leftInventory?: InventoryProps;
     rightInventory?: InventoryProps;
   }>('setupInventory', (data) => {
+    // start spinner
+    setIsLoading(true);
+
     dispatch(setupInventory(data));
-    !inventoryVisible && setInventoryVisible(true);
+    if (!inventoryVisible) setInventoryVisible(true);
+
+    // ensure minimum spinner time
+    setTimeout(() => setIsLoading(false), 200);
   });
 
   useNuiEvent('refreshSlots', (data) => dispatch(refreshSlots(data)));
@@ -42,7 +49,15 @@ const Inventory: React.FC = () => {
 
   return (
     <>
-      <Fade in={inventoryVisible}>
+      {/* Spinner overlay */}
+      {inventoryVisible && isLoading && (
+        <div className="loading-spinner-container">
+          <div className="loading-spinner" />
+        </div>
+      )}
+
+      {/* Inventory UI fades in after loading */}
+      <Fade in={inventoryVisible && !isLoading}>
         <div className="inventory-wrapper">
           <LeftInventory />
           <InventoryControl />
@@ -51,6 +66,7 @@ const Inventory: React.FC = () => {
           <InventoryContext />
         </div>
       </Fade>
+
       <InventoryHotbar />
     </>
   );
