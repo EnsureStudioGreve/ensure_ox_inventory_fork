@@ -1097,6 +1097,16 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 
 	inv = Inventory(inv) --[[@as OxInventory]]
 
+    	if (inv.weight + (item.weight * count)) > shared.playerweight then
+		if inv.player then
+			TriggerClientEvent('ox_lib:notify', inv.player.source, {
+				type = 'error',
+				description = 'Inventaret ditt har ikke nok plass!'
+			})
+		end
+		return
+	end
+
 	if not inv?.slots then return false, 'invalid_inventory' end
 
 	local toSlot, slotMetadata, slotCount
