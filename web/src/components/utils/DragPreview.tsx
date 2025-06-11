@@ -1,4 +1,4 @@
-import React, { RefObject, useRef } from 'react';
+import React, { RefObject, useRef, useEffect } from 'react';
 import { DragLayerMonitor, useDragLayer, XYCoord } from 'react-dnd';
 import { DragSource } from '../../typings';
 
@@ -47,6 +47,14 @@ const DragPreview: React.FC = () => {
     currentOffset: calculatePointerPosition(monitor, element),
     isDragging: monitor.isDragging(),
   }));
+
+    useEffect(() => {
+    if (isDragging) {
+      document.body.classList.add('dragging');
+    } else {
+      document.body.classList.remove('dragging');
+    }
+  });
 
   return (
     <>
