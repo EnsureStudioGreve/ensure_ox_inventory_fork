@@ -5,6 +5,7 @@ require 'modules.interface.client'
 
 local Utils = require 'modules.utils.client'
 local Weapon = require 'modules.weapon.client'
+local VirtualPed = require 'modules.virtualPed.client'
 local currentWeapon
 
 exports('getCurrentWeapon', function()
@@ -118,6 +119,9 @@ local Inventory = require 'modules.inventory.client'
 ---@return boolean?
 function client.openInventory(inv, data)
 	if invOpen then
+
+		VirtualPed.stopClonedPedPreview()
+
 		if not inv and currentInventory.type == 'newdrop' then
 			return client.closeInventory()
 		end
@@ -283,6 +287,15 @@ function client.openInventory(inv, data)
         }
     })
 
+		VirtualPed.startClonedPedPreview(cache.ped, {
+		dict = "anim@heists@heist_corona@single_team",Add commentMore actions
+		name = "single_team_loop_boss"
+	}, {
+		distance = 3.0,
+		x = 0.0,
+		z = 0.0
+	})
+
     if not currentInventory.coords and not inv == 'container' then
         currentInventory.coords = GetEntityCoords(playerPed)
     end
@@ -319,6 +332,10 @@ exports('openInventory', client.openInventory)
 RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 	if source == '' then return end
 
+	if invOpen then
+		VirtualPed.stopClonedPedPreview()
+	end
+
 	plyState.invOpen = true
 
 	SetInterval(client.interval, 100)
@@ -339,6 +356,15 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 			leftInventory = left,
 			rightInventory = currentInventory
 		}
+	})
+
+	VirtualPed.startClonedPedPreview(cache.ped, {Add commentMore actions
+		dict = "anim@heists@heist_corona@single_team",
+		name = "single_team_loop_boss"
+	}, {
+		distance = 3.0,
+		x = 0.0,
+		z = 0.0
 	})
 end)
 
