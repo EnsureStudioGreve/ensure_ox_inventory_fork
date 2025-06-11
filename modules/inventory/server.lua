@@ -1097,7 +1097,8 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 
 	inv = Inventory(inv) --[[@as OxInventory]]
 
-    	if (inv.weight + (item.weight * count)) > shared.playerweight then
+	-- Remove if problem with using the giving items with rarity command
+    if (inv.weight + (item.weight * count)) > shared.playerweight then
 		if inv.player then
 			TriggerClientEvent('ox_lib:notify', inv.player.source, {
 				type = 'error',
