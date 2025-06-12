@@ -1568,8 +1568,7 @@ local function dropItem(source, playerInventory, fromData, data)
 	toData.count = data.count
 	toData.weight = Inventory.SlotWeight(Items(toData.name), toData)
 
-	if toData.weight > shared.dropweight then return end
-    -- if toData.weight > shared.playerweight then return end
+    if toData.weight > shared.playerweight then return end
 
     local dropId = generateInvId('drop')
 
@@ -2425,12 +2424,9 @@ local function giveItem(playerId, slot, target, count)
 	local fromInventory = Inventory(playerId)
 	local toInventory = Inventory(target)
 
-	if not fromInventory or not toInventory then return end
-
 	if count <= 0 then count = 1 end
 
-	-- if toInventory?.player then
-	if toInventory.player then
+	if toInventory?.player then
 		local data = fromInventory.items[slot]
 
 		if not data then return end
