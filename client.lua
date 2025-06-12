@@ -80,9 +80,9 @@ end
 
 local defaultInventory = {
 	type = 'newdrop',
-	slots = shared.playerslots,
+	slots = shared.dropslots, --slots = shared.playerslots,
 	weight = 0,
-	maxWeight = shared.playerweight,
+	maxWeight = shared.dropweight,--maxWeight = shared.playerweight,
 	items = {}
 }
 
