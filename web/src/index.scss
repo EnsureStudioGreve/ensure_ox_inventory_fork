@@ -10,9 +10,9 @@ $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
-$gridRows: 7.5;
+$gridRows: 5;
 $gridSize: 9.8vh;
-$gridGap: 4px;
+$gridGap: 2px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
 body {
