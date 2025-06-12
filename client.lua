@@ -911,6 +911,7 @@ function client.closeInventory(server)
 		closeTrunk()
 		SendNUIMessage({ action = 'closeInventory' })
 		SetInterval(client.interval, 200)
+		VirtualPed.stopClonedPedPreview()
 		Wait(200)
 
 		if invOpen ~= nil then return end
