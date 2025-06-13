@@ -11,20 +11,28 @@ import Divider from '../utils/Divider';
 const getRarityColor = (rarity: string) => {
   switch (rarity) {
     case 'Vanlig':
-      return '#A6E519'; // Uncommon
+      return '#A6E519'; // Vanlig
     case 'Uvanlig':
-      return '#A6E519'; // Common
+      return '#A6E519'; // Uvanlig
     case 'Sjelden':
-      return '#00FFFF'; // Rare
+      return '#00FFFF'; // Sjelden
     case 'Episk':
-      return '#CD00CD'; // Epic
+      return '#CD00CD'; // Episk
     case 'Legendarisk':
-      return '#FFD700'; // Legendary
+      return '#FFD700'; // Legendarisk
     case 'Tjenesteutstyr':
-      return '#FFD700'; // Duty Tools
+      return '#FFD700'; // Tjenesteutstyr
     case 'Materialer':
-      return '#FFD700'; // Materials
-    default:
+      return '#FFD700'; // Materialer
+    case 'Medikament':
+      return '#FFD700'; // Medikament
+    case 'Narkotikautstyr':
+      return '#FFD700'; // Narkotikautstyr
+    case 'Legemiddelutstyr':
+      return '#FFD700'; // Legemiddelutstyr
+    case 'Verktøy':
+      return '#FFD700'; // Verktøy
+      default:
       return '#000000'; // Fallback Farge
   }
 };
@@ -32,19 +40,27 @@ const getRarityColor = (rarity: string) => {
 const getRarityColorBG = (rarity: string) => {
   switch (rarity) {
       case 'Vanlig':
-      return '#0080001A'; // Uncommon
+      return '#0080001A'; // Vanlig
     case 'Uvanlig':
-      return '#0080001A'; // Common
+      return '#0080001A'; // Uvanlig
     case 'Sjelden':
-      return '#00FFFF1A'; // Rare
+      return '#00FFFF1A'; // Sjelden
     case 'Episk':
-      return '#8000801A'; // Epic
+      return '#8000801A'; // Episk
     case 'Legendarisk':
-      return '#FFD7001A'; // Legendary
+      return '#FFD7001A'; // LegeLegendariskndary
     case 'Tjenesteutstyr':
-      return '#FFD7001A'; // Duty Tools
+      return '#FFD7001A'; // Tjenesteutstyr
     case 'Materialer':
       return '#FFD7001A'; // Materials
+      case 'Medikament':
+      return '#FFD7001A'; // Medikament
+    case 'Narkotikautstyr':
+      return '#FFD7001A'; // Narkotikautstyr
+    case 'Legemiddelutstyr':
+      return '#FFD7001A'; // Legemiddelutstyr
+    case 'Verktøy':
+      return '#FFD7001A'; // Verktøy
     default:
       return '#0000001A'; // Fallback Farge
   }

@@ -24,7 +24,8 @@ debugData([
         weight: 3000,
         maxWeight: 5000,
         items: [
-          { slot: 1, name: 'weapon_stungun', weight: 100, count: 1, rarity: 'Legendarisk', },
+          { slot: 1, name: 'painkillers', weight: 100, count: 1, rarity: 'Legemiddelutstyr', },
+          { slot: 2, name: 'joint', weight: 100, count: 1, rarity: 'Medikament', },
         ],
       },
       rightInventory: {
