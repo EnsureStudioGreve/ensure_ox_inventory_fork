@@ -1,6 +1,7 @@
 export type Slot = {
   slot: number;
   name?: string;
+  rarity?: string;
   count?: number;
   weight?: number;
   metadata?: {
@@ -11,6 +12,7 @@ export type Slot = {
 
 export type SlotWithItem = Slot & {
   name: string;
+  rarity: string;
   count: number;
   weight: number;
   durability?: number;

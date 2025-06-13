@@ -8,6 +8,41 @@ import ClockIcon from '../utils/icons/ClockIcon';
 import { getItemUrl } from '../../helpers';
 import Divider from '../utils/Divider';
 
+const getRarityColor = (rarity: string) => {
+  switch (rarity) {
+    case 'common':
+      return '#A6E519'; // Verde senza opacità
+    case 'rare':
+      return '#00FFFF'; // Ciano senza opacità
+    case 'epic':
+      return '#CD00CD'; // Viola senza opacità
+    case 'legendary':
+      return '#FFD700'; // Oro senza opacità
+    case 'special':
+      return '#FFFFFF'; // Bianco senza opacità
+    default:
+      return '#000000'; // Nero senza opacità
+  }
+};
+
+const getRarityColorBG = (rarity: string) => {
+  switch (rarity) {
+    case 'comune':
+      return '#0080001A'; // Verde con 10% di opacità
+    case 'rare':
+      return '#00FFFF1A'; // Ciano con 10% di opacità
+    case 'epic':
+      return '#8000801A'; // Viola con 10% di opacità
+    case 'legendary':
+      return '#FFD7001A'; // Oro con 10% di opacità
+    case 'special':
+      return '#DC23671A'; // Bianco con 10% di opacità
+    default:
+      return '#0000001A'; // Nero con 10% di opacità
+  }
+};
+
+
 const SlotTooltip: React.ForwardRefRenderFunction<
   HTMLDivElement,
   { item: SlotWithItem; inventoryType: Inventory['type']; style: React.CSSProperties }
@@ -29,6 +64,19 @@ const SlotTooltip: React.ForwardRefRenderFunction<
             <p>{item.name}</p>
           </div>
           <Divider />
+
+          {item.rarity && (
+            <span
+              className="rarity"
+              style={{ 
+                color: getRarityColor(item.rarity),
+                backgroundColor: getRarityColorBG(item.rarity),
+              }}
+            >
+              {item.rarity || 'Non rilevato'}
+            </span>
+          )}
+
         </div>
       ) : (
         <div style={{ ...style }} className="tooltip-wrapper" ref={ref}>
@@ -44,6 +92,20 @@ const SlotTooltip: React.ForwardRefRenderFunction<
             )}
           </div>
           <Divider />
+
+          {item.rarity && (
+            <span
+              className="rarity"
+              style={{ 
+                color: getRarityColor(item.rarity),
+                backgroundColor: getRarityColorBG(item.rarity),
+                
+              }}
+            >
+              {item.rarity || 'Non rilevato'}
+            </span>
+          )}
+
           {description && (
             <div className="tooltip-description">
               <ReactMarkdown className="tooltip-markdown">{description}</ReactMarkdown>
