@@ -10,16 +10,20 @@ import Divider from '../utils/Divider';
 
 const getRarityColor = (rarity: string) => {
   switch (rarity) {
-    case 'common':
+    case 'Vanlig':
+      return '#A6E519'; // Uncommon
+    case 'Uvanlig':
       return '#A6E519'; // Common
-    case 'rare':
+    case 'Sjelden':
       return '#00FFFF'; // Rare
-    case 'epic':
+    case 'Episk':
       return '#CD00CD'; // Epic
-    case 'legendary':
+    case 'Legendarisk':
       return '#FFD700'; // Legendary
-    case 'special':
-      return '#FFFFFF'; // Special
+    case 'Tjenesteutstyr':
+      return '#FFD700'; // Duty Tools
+    case 'Materialer':
+      return '#FFD700'; // Materials
     default:
       return '#000000'; // Fallback Farge
   }
@@ -27,16 +31,20 @@ const getRarityColor = (rarity: string) => {
 
 const getRarityColorBG = (rarity: string) => {
   switch (rarity) {
-    case 'common':
+      case 'Vanlig':
+      return '#0080001A'; // Uncommon
+    case 'Uvanlig':
       return '#0080001A'; // Common
-    case 'rare':
+    case 'Sjelden':
       return '#00FFFF1A'; // Rare
-    case 'epic':
+    case 'Episk':
       return '#8000801A'; // Epic
-    case 'legendary':
+    case 'Legendarisk':
       return '#FFD7001A'; // Legendary
-    case 'special':
-      return '#DC23671A'; // Special
+    case 'Tjenesteutstyr':
+      return '#FFD7001A'; // Duty Tools
+    case 'Materialer':
+      return '#FFD7001A'; // Materials
     default:
       return '#0000001A'; // Fallback Farge
   }

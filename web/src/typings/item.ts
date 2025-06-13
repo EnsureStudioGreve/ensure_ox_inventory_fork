@@ -9,5 +9,5 @@ export type ItemData = {
   buttons?: string[];
   ammoName?: string;
   image?: string;
-  rarity?: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+  rarity?: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary' | 'tjenesteutstyr';
 };

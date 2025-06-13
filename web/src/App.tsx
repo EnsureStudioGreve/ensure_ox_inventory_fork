@@ -24,7 +24,7 @@ debugData([
         weight: 3000,
         maxWeight: 5000,
         items: [
-          { slot: 1, name: 'water', weight: 100, count: 1, rarity: 'legendary', },
+          { slot: 1, name: 'weapon_stungun', weight: 100, count: 1, rarity: 'Legendarisk', },
         ],
       },
       rightInventory: {
