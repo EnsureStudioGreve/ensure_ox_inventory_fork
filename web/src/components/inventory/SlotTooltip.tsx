@@ -97,7 +97,7 @@ const SlotTooltip: React.ForwardRefRenderFunction<
                 backgroundColor: getRarityColorBG(item.rarity),
               }}
             >
-              {item.rarity || 'Non rilevato'}
+              {item.rarity || 'Ikke oppdaget'}
             </span>
           )}
 
@@ -126,7 +126,7 @@ const SlotTooltip: React.ForwardRefRenderFunction<
                 
               }}
             >
-              {item.rarity || 'Non rilevato'}
+              {item.rarity || 'Ikke oppdaget'}
             </span>
           )}
 
