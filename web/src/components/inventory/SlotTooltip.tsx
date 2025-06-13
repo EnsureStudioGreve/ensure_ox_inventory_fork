@@ -11,34 +11,34 @@ import Divider from '../utils/Divider';
 const getRarityColor = (rarity: string) => {
   switch (rarity) {
     case 'common':
-      return '#A6E519'; // Verde senza opacità
+      return '#A6E519'; // Common
     case 'rare':
-      return '#00FFFF'; // Ciano senza opacità
+      return '#00FFFF'; // Rare
     case 'epic':
-      return '#CD00CD'; // Viola senza opacità
+      return '#CD00CD'; // Epic
     case 'legendary':
-      return '#FFD700'; // Oro senza opacità
+      return '#FFD700'; // Legendary
     case 'special':
-      return '#FFFFFF'; // Bianco senza opacità
+      return '#FFFFFF'; // Special
     default:
-      return '#000000'; // Nero senza opacità
+      return '#000000'; // Fallback Farge
   }
 };
 
 const getRarityColorBG = (rarity: string) => {
   switch (rarity) {
-    case 'comune':
-      return '#0080001A'; // Verde con 10% di opacità
+    case 'common':
+      return '#0080001A'; // Common
     case 'rare':
-      return '#00FFFF1A'; // Ciano con 10% di opacità
+      return '#00FFFF1A'; // Rare
     case 'epic':
-      return '#8000801A'; // Viola con 10% di opacità
+      return '#8000801A'; // Epic
     case 'legendary':
-      return '#FFD7001A'; // Oro con 10% di opacità
+      return '#FFD7001A'; // Legendary
     case 'special':
-      return '#DC23671A'; // Bianco con 10% di opacità
+      return '#DC23671A'; // Special
     default:
-      return '#0000001A'; // Nero con 10% di opacità
+      return '#0000001A'; // Fallback Farge
   }
 };
 
