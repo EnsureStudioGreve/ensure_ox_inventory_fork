@@ -22,14 +22,6 @@ const playDragAudio = () => {
   audio.play().catch(() => {});
 };
 
-const rarityColors: Record<string, string> = {
-  common: '#BBBBBB',
-  uncommon: '#3EFF3E',
-  rare: '#3E9EFF',
-  epic: '#A93EFF',
-  legendary: '#FFAE00',
-};
-
 interface SlotProps {
   inventoryId: Inventory['id'];
   inventoryType: Inventory['type'];
